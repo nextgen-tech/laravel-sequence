@@ -15,11 +15,24 @@
         "phpstan/phpstan": "^0.12.87",
         "nunomaduro/larastan": "^0.7.6",
         "orchestra/testbench": "^6.18",
-        "psy/psysh": "^0.10.8"
+        "psy/psysh": "^0.10.8",
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
             "NGT\\Laravel\\Sequence\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NGT\\Laravel\\Sequence\\SequenceServiceProvider"
+            ]
         }
     }
 }

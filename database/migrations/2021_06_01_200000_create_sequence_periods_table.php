@@ -16,7 +16,7 @@ class CreateSequencePeriodsTable extends Migration
     {
         Schema::create('sequence_periods', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('rule_id')->constrained()
+            $table->foreignId('rule_id')->constrained('sequence_rules')
                 ->cascadeOnUpdate()->restrictOnDelete();
             $table->date('date');
             $table->unsignedInteger('ordinal_number');
