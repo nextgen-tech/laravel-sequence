@@ -1,6 +1,7 @@
 {
     "name": "nextgen-tech/laravel-sequence",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Krzysztof Grabania",
