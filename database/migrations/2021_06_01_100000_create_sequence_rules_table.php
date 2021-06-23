@@ -16,7 +16,7 @@ class CreateSequenceRulesTable extends Migration
     {
         Schema::create('sequence_rules', function (Blueprint $table) {
             $table->id();
-            $table->string('type')->index();
+            $table->string('type')->unique();
             $table->string('pattern');
             $table->string('reset_frequency');
             $table->timestamps();
