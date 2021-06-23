@@ -3,9 +3,11 @@ declare(strict_types=1);
 
 namespace NGT\Laravel\Sequence\Models;
 
-use NGT\Laravel\Sequence\Enums\ResetFrequency;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use NGT\Database\Factories\SequenceRuleFactory;
+use NGT\Laravel\Sequence\Enums\ResetFrequency;
 
 /**
  * @property  string  $pattern
@@ -13,6 +15,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class SequenceRule extends Model
 {
+    use HasFactory;
+
     public $table = 'sequence_rules';
 
     /**
@@ -23,6 +27,16 @@ class SequenceRule extends Model
         'pattern',
         'reset_frequency',
     ];
+
+    /**
+     * Create a new factory instance for the model.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    protected static function newFactory()
+    {
+        return SequenceRuleFactory::new();
+    }
 
     /**
      * Get the related periods.

@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": "^7.3|^8.0",
-        "laravel/framework": "^7.0|^8.0",
+        "laravel/framework": "^8.0",
         "bensampo/laravel-enum": "^3.3"
     },
     "require-dev": {
@@ -22,7 +22,8 @@
     },
     "autoload": {
         "psr-4": {
-            "NGT\\Laravel\\Sequence\\": "src/"
+            "NGT\\Laravel\\Sequence\\": "src/",
+            "NGT\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
